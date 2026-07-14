@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  role      String
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id         String   @id @default(uuid())
+  name       String
+  status     String
+  clientName String?
+  createdAt  DateTime @default(now())
+}
+
+model Income {
+  id            String   @id @default(uuid())
+  projectId     String?
+  category      String
+  source        String?
+  amount        Decimal
+  received      Decimal  @default(0)
+  paymentStatus String
+  shareable     Boolean  @default(true)
+  description   String?
+  createdAt     DateTime @default(now())
+}
+
+model Expense {
+  id             String   @id @default(uuid())
+  projectId      String?
+  category       String
+  amount         Decimal
+  paymentMethod  String
+  approvalStatus String
+  description    String?
+  createdAt      DateTime @default(now())
+}
+
+model FundTransaction {
+  id          String   @id @default(uuid())
+  amount      Decimal
+  source      String?
+  description String?
+  createdAt   DateTime @default(now())
+}
+
+model ReserveTransaction {
+  id        String   @id @default(uuid())
+  type      String
+  amount    Decimal
+  reason    String?
+  createdAt DateTime @default(now())
+}
+
+model MemberLoan {
+  id              String   @id @default(uuid())
+  memberId        String
+  amount          Decimal
+  remainingAmount Decimal
+  issueDate       DateTime @default(now())
+  dueDate         DateTime
+  status          String   @default("ACTIVE")
+  createdAt       DateTime @default(now())
+}
+
+model Advance {
+  id              String   @id @default(uuid())
+  memberId        String
+  amount          Decimal
+  remainingAmount Decimal
+  reason          String?
+  status          String   @default("ACTIVE")
+  createdAt       DateTime @default(now())
+}
+
+model Settlement {
+  id             String   @id @default(uuid())
+  period         String
+  status         String   @default("PENDING")
+  totalIncome    Decimal
+  totalExpenses  Decimal
+  ceoShare       Decimal
+  developerShare Decimal
+  companyShare   Decimal
+  createdAt      DateTime @default(now())
+}
