@@ -24,7 +24,7 @@ This plan outlines the end-to-end implementation for the Company Finance & Reven
 
 ## Phase 4: Monthly Settlement Engine (The Core Logic)
 
-- [ ] **4.1 Settlement Service:** Build the core math engine.
+- [x] **4.1 Settlement Service:** Build the core math engine.
   - Fetch only PAID/PARTIAL income for the period.
   - Deduct APPROVED expenses.
   - Apply category-based distribution (e.g., Development: CEO 40%, Dev 20%, Co 40%).
