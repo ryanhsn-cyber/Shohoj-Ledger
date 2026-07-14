@@ -15,6 +15,7 @@ export default function DashboardLayout({
           <Link href="/dashboard/projects" className={styles.navLink}>Projects (P&L)</Link>
           <Link href="/dashboard/income" className={styles.navLink}>Income</Link>
           <Link href="/dashboard/expenses" className={styles.navLink}>Expenses</Link>
+          <Link href="/dashboard/funds" className={styles.navLink}>Company Funds</Link>
           <Link href="/dashboard/loans" className={styles.navLink}>Loans & Advances</Link>
           <Link href="/dashboard/settlement" className={styles.navLink}>Settlement</Link>
         </nav>
