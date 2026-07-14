@@ -5,8 +5,8 @@ Develop a Company Finance & Revenue Sharing CRM (Shohoj Ledger) to manage income
 
 **Current Status:**
 
-- **Last major feature added:** Completed Phase 1 (Project Scaffolding & Core Architecture), including Next.js 15 initialization, Postgres database setup, Better Auth configuration, and establishing the Premium Dark UI Foundation.
-- **Next Phase:** Phase 2 (Core Financial Operations - Income & Expenses). Prisma schema is defined with models for User, Project, Income, Expense, FundTransaction, ReserveTransaction, MemberLoan, Advance, and Settlement.
+- **Last major feature added:** Completed Phase 2 (Core Financial Operations), implementing APIs and UIs for Income (with partial payment tracking), Expenses (with approval workflows), and Projects (with Profitability & Loss calculation).
+- **Next Phase:** Phase 3 (Funds, Reserves & Advances) focusing on non-shareable funds, reserve transaction records, and employee loans.
 
 **Goal Pivots:**
 N/A (Initial Setup)
