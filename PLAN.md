@@ -39,5 +39,5 @@ This plan outlines the end-to-end implementation for the Company Finance & Reven
 
 ## Phase 6: Production & Security
 
-- [ ] **6.1 Backup Automation:** Setup MinIO scripts for weekly backups and daily Postgres dumps.
+- [x] **6.1 Backup Automation:** Setup MinIO scripts for weekly backups and daily Postgres dumps.
 - [ ] **6.2 Coolify Deployment:** Finalize Docker configuration and environment variables for live server deployment.
