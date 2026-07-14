@@ -29,7 +29,7 @@ This plan outlines the end-to-end implementation for the Company Finance & Reven
   - Deduct APPROVED expenses.
   - Apply category-based distribution (e.g., Development: CEO 40%, Dev 20%, Co 40%).
   - Auto-deduct active advance due balances from individual shares.
-- [ ] **4.2 Settlement Execution:** Auto-transfer the "Company" portion to the Reserve Balance.
+- [x] **4.2 Settlement Execution:** Auto-transfer the "Company" portion to the Reserve Balance.
 - [ ] **4.3 Settlement UI:** Build the interface to preview, approve, and finalize monthly payouts.
 
 ## Phase 5: Dashboard & Reporting

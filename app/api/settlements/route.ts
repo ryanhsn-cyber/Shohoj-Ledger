@@ -82,3 +82,43 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Failed to record settlement" }, { status: 500 });
   }
 }
+
+export async function PATCH(request: Request) {
+  try {
+    const body = await request.json();
+    const { id, action } = body;
+
+    if (!id || action !== "EXECUTE") {
+      return NextResponse.json({ error: "Invalid execution request" }, { status: 400 });
+    }
+
+    const settlement = await prisma.settlement.findUnique({ where: { id } });
+    if (!settlement || settlement.status !== "PENDING") {
+      return NextResponse.json({ error: "Settlement not found or already executed" }, { status: 400 });
+    }
+
+    // Execute the settlement within a transaction
+    const [updatedSettlement, reserveDeposit] = await prisma.$transaction([
+      // 1. Mark Settlement as Executed
+      prisma.settlement.update({
+        where: { id },
+        data: { status: "EXECUTED" }
+      }),
+      // 2. Auto-transfer the Company portion to the Reserve Balance
+      prisma.reserveTransaction.create({
+        data: {
+          type: "DEPOSIT",
+          amount: settlement.companyShare,
+          reason: `Auto-deposit from ${settlement.period} Settlement`,
+          // Note: The current Prisma schema for ReserveTransaction might not have settlementId explicitly linked,
+          // but we can add it to the reason/description.
+        }
+      })
+    ]);
+
+    return NextResponse.json(updatedSettlement);
+  } catch (error) {
+    console.error("Error executing settlement:", error);
+    return NextResponse.json({ error: "Failed to execute settlement" }, { status: 500 });
+  }
+}

@@ -69,6 +69,22 @@ export default function SettlementPage() {
     }
   };
 
+  const handleExecuteSettlement = async (id: string) => {
+    try {
+      const res = await fetch("/api/settlements", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, action: "EXECUTE" }),
+      });
+
+      if (res.ok) {
+        fetchSettlements();
+      }
+    } catch (err) {
+      console.error("Failed to execute settlement", err);
+    }
+  };
+
   const formatCurrency = (val: number | string) => {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'BDT' }).format(Number(val));
   };
@@ -155,6 +171,7 @@ export default function SettlementPage() {
                   <th>Net Profit</th>
                   <th>Company (40%)</th>
                   <th>Status</th>
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -168,11 +185,18 @@ export default function SettlementPage() {
                         {s.status}
                       </span>
                     </td>
+                    <td>
+                      {s.status === "PENDING" && (
+                        <button onClick={() => handleExecuteSettlement(s.id)} className="btn btn-secondary" style={{ padding: '4px 10px', fontSize: '12px', color: 'var(--success)', borderColor: 'var(--success)' }}>
+                          Execute
+                        </button>
+                      )}
+                    </td>
                   </tr>
                 ))}
                 {settlements.length === 0 && (
                   <tr>
-                    <td colSpan={4} style={{ textAlign: "center", padding: "var(--spacing-4)" }}>
+                    <td colSpan={5} style={{ textAlign: "center", padding: "var(--spacing-4)" }}>
                       No settlements recorded yet.
                     </td>
                   </tr>
