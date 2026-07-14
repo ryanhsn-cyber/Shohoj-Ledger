@@ -35,7 +35,7 @@ This plan outlines the end-to-end implementation for the Company Finance & Reven
 ## Phase 5: Dashboard & Reporting
 
 - [x] **5.1 Overview Dashboard:** Aggregate metrics for total cash flow, reserve balance, and outstanding loans.
-- [ ] **5.2 Project Profitability:** Detailed view of income vs. expenses per project.
+- [x] **5.2 Project Profitability:** Detailed view of income vs. expenses per project.
 
 ## Phase 6: Production & Security
 
