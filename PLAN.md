@@ -3,7 +3,7 @@
 This plan outlines the end-to-end implementation for the Company Finance & Revenue Sharing CRM based on `SPEC.md` and the existing database schema.
 
 ## Phase 1: Project Scaffolding & Core Architecture
-- [ ] **1.1 Next.js Setup:** Initialize `package.json` with Next.js 15, React 19, and required dependencies.
+- [x] **1.1 Next.js Setup:** Initialize `package.json` with Next.js 15, React 19, and required dependencies.
 - [ ] **1.2 Database Infrastructure:** Create `docker-compose.yml` for PostgreSQL 16 and apply initial Prisma migrations (`npx prisma migrate dev`).
 - [ ] **1.3 Authentication:** Install and configure Better Auth for session management.
 - [ ] **1.4 UI Foundation:** Set up Vanilla CSS / CSS Modules for the design system (Premium UI, dark mode support).
