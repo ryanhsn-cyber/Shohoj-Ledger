@@ -24,19 +24,19 @@
   },
   "homepage": "https://github.com/ryanhsn-cyber/Shohoj-Ledger#readme",
   "dependencies": {
-    "@prisma/client": "^7.8.0",
     "better-auth": "^1.6.23",
     "next": "^16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
+    "@prisma/client": "^6.19.3",
     "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.2.10",
-    "prisma": "^7.8.0",
+    "prisma": "^6.19.3",
     "typescript": "^6.0.3"
   }
 }
