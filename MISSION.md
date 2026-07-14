@@ -5,8 +5,8 @@ Develop a Company Finance & Revenue Sharing CRM (Shohoj Ledger) to manage income
 
 **Current Status:**
 
-- **Last major feature added:** Completed Phase 3 (Funds, Reserves & Advances), establishing APIs and UIs for company capital injections, reserve balance tracking, member loans (with 6-month overdue logic), and member salary advances.
-- **Next Phase:** Phase 4 (Monthly Settlement Engine), focusing on the core math engine to calculate net distributions based on paid/partial income, approved expenses, and active advances.
+- **Last major feature added:** Completed Phase 4 (Monthly Settlement Engine), implementing the core math distributions (CEO, Developer, Company), auto-transfers of the Company Share to the Reserve Balance, and the interactive execution UI.
+- **Next Phase:** Phase 5 (Dashboard & Reporting), aggregating metrics for total cash flow, reserve balances, and outstanding loans onto a single unified overview.
 
 **Goal Pivots:**
 N/A (Initial Setup)
