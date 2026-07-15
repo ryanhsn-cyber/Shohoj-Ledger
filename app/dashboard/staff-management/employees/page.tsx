@@ -21,7 +21,7 @@ export default function EmployeesPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newEmployee, setNewEmployee] = useState({
-    firstName: '', lastName: '', email: '', phone: '', designation: '', department: '', basicSalary: '', joinDate: ''
+    firstName: '', lastName: '', email: '', phone: '', designation: '', department: '', basicSalary: '', joinDate: '', password: ''
   });
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function EmployeesPage() {
         const added = await res.json();
         setEmployees([added, ...employees]);
         setIsModalOpen(false);
-        setNewEmployee({ firstName: '', lastName: '', email: '', phone: '', designation: '', department: '', basicSalary: '', joinDate: '' });
+        setNewEmployee({ firstName: '', lastName: '', email: '', phone: '', designation: '', department: '', basicSalary: '', joinDate: '', password: '' });
       } else {
         alert("Failed to add employee. Please check required fields.");
       }
@@ -194,6 +194,20 @@ export default function EmployeesPage() {
                 <div>
                   <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Join Date *</label>
                   <input type="date" className="input" value={newEmployee.joinDate} onChange={(e) => setNewEmployee({...newEmployee, joinDate: e.target.value})} required />
+                </div>
+              </div>
+
+              <div style={{ marginTop: '8px', padding: '16px', background: 'rgba(59,130,246,0.05)', borderRadius: '12px', border: '1px solid rgba(59,130,246,0.1)' }}>
+                <h3 style={{ fontSize: '14px', fontWeight: 'bold', color: '#93c5fd', margin: '0 0 16px 0' }}>App Login Credentials</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Employee ID (Auto-generated)</label>
+                    <input type="text" className="input" value="Generated on Save" disabled style={{ opacity: 0.7, cursor: 'not-allowed' }} />
+                  </div>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>App Password *</label>
+                    <input type="text" className="input" placeholder="e.g. 123456" value={newEmployee.password} onChange={(e) => setNewEmployee({...newEmployee, password: e.target.value})} required />
+                  </div>
                 </div>
               </div>
 

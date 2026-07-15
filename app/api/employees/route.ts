@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
     
-    if (!data.firstName || !data.lastName || !data.email || !data.designation || !data.basicSalary) {
+    if (!data.firstName || !data.lastName || !data.email || !data.designation || !data.basicSalary || !data.password) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
@@ -28,6 +28,7 @@ export async function POST(request: Request) {
     const employee = await prisma.employee.create({
       data: {
         employeeId,
+        password: data.password,
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,

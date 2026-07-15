@@ -165,6 +165,7 @@ model Employee {
   id              String            @id @default(uuid())
   userId          String?           @unique // Link to User model if they can log in
   employeeId      String            @unique
+  password        String?
   firstName       String
   lastName        String
   email           String            @unique
