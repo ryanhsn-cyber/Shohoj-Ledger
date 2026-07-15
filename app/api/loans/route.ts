@@ -54,6 +54,10 @@ export async function POST(request: Request) {
 
     const loanAmount = parseFloat(amount);
 
+    const issueDate = new Date();
+    const dueDate = new Date(issueDate);
+    dueDate.setMonth(dueDate.getMonth() + 6);
+
     const loan = await prisma.memberLoan.create({
       data: {
         memberId,
@@ -61,7 +65,8 @@ export async function POST(request: Request) {
         remainingAmount: loanAmount,
         status: "ACTIVE",
         reason: description,
-        issueDate: new Date()
+        issueDate,
+        dueDate
       }
     });
 

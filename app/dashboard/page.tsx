@@ -312,7 +312,7 @@ export default function DashboardIndex() {
             <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.03)' }}>
               <td style={{ padding: '16px 12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '32px', height: '32px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justify: 'center' }}>
+                  <div style={{ width: '32px', height: '32px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#3b82f6', margin: 'auto' }}>receipt_long</span>
                   </div>
                   <div>
@@ -327,7 +327,7 @@ export default function DashboardIndex() {
             <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.03)' }}>
               <td style={{ padding: '16px 12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '32px', height: '32px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justify: 'center' }}>
+                  <div style={{ width: '32px', height: '32px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#3b82f6', margin: 'auto' }}>sync_alt</span>
                   </div>
                   <div>
@@ -342,7 +342,7 @@ export default function DashboardIndex() {
             <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.03)' }}>
               <td style={{ padding: '16px 12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '32px', height: '32px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justify: 'center' }}>
+                  <div style={{ width: '32px', height: '32px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#3b82f6', margin: 'auto' }}>account_balance</span>
                   </div>
                   <div>

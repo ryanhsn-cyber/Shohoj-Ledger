@@ -13,6 +13,7 @@ type Member = {
     walletBalance: number;
     totalAdvances: number;
     totalLoans: number;
+    totalEarned: number;
     availableForWithdrawal: number;
     recentTransactions: any[];
   }
@@ -68,6 +69,7 @@ export default function MemberProfilePage({ params }: { params: Promise<{ id: st
     walletBalance: 0,
     totalAdvances: 0,
     totalLoans: 0,
+    totalEarned: 0,
     availableForWithdrawal: 0,
     recentTransactions: []
   };
