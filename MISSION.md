@@ -5,7 +5,7 @@ Develop a Company Finance & Revenue Sharing CRM (Shohoj Ledger) to manage income
 
 **Current Status:**
 
-- **Last major feature added:** Initiated Phase 6 (Staff Management module). Created Prisma models for Employee, Attendance, LeaveRequest, Payroll, Bonuses, and Payslips. Integrated the Admin Staff Dashboard into the layout and built the Employee Portal (/staff) foundations.
+- **Last major feature added:** Implemented the Login Page UI integrating with Better Auth to allow users to sign in. Added login link to the homepage.
 - **Next Phase:** Phase 6 (Staff Management module) - Complete Attendance rules (late deductions), Leave approvals, and Payroll generation engine, followed by integration with the Expense module.
 
 **Goal Pivots:**

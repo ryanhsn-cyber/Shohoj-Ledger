@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,6 +11,23 @@ export default function Home() {
         <p className={styles.description}>
           Company Finance & Revenue Sharing CRM
         </p>
+        
+        <div style={{ marginTop: '1rem', marginBottom: '2rem' }}>
+          <Link 
+            href="/login" 
+            style={{ 
+              background: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)', 
+              color: '#fff', 
+              padding: '0.75rem 2rem', 
+              borderRadius: '24px', 
+              textDecoration: 'none', 
+              fontWeight: 600,
+              fontSize: '1.1rem'
+            }}
+          >
+            Sign In
+          </Link>
+        </div>
         
         <div className={styles.actionGrid}>
           <div className={styles.card}>
